@@ -5,8 +5,9 @@
 }
 
 body {
-    overflow: hidden;
-}
+        overflow-x: hidden;
+    }
+    
 
 a {
     color: white;
@@ -32,7 +33,12 @@ a:hover {
     cursor:pointer;
 }
 
-@media(min-width: 1024px) {
+@media(min-width: 992px) {
+
+    body {
+        overflow-y: hidden;
+    }
+    
     #bigContainer {
         display: flex;
         flex-direction: row;
@@ -91,10 +97,11 @@ a:hover {
     
     #right-section {
         max-width: 1000px;
-        height: 200px;
+        height: calc(100vh - 100px);
         padding: 50px 30px 50px 40px;
         text-wrap: wrap;
         flex-grow: 1;
+        overflow-y: scroll;
     }
 
     #up-section > span {
@@ -106,6 +113,75 @@ a:hover {
 
 }
 
+
+@media(max-width: 991px) {
+    #bigContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #leftSection {
+        color: white;
+        box-shadow: 0.5rem 0.5rem 1rem rgba(0,0,0,0.2);
+    }
+    
+    #textSection {
+        width: 100%;
+        background-color: black;
+        padding: 50px 20px 30px 40px;
+        word-wrap: break-word;
+    }
+
+    #textSection > .muted {
+        margin: 20px 0px 5px 0px;
+    }
+
+    #syllabus {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #syllabus > div > button {
+        font-size: 1.125rem;
+        text-align: left;
+        margin-left: 25px;
+        padding: 2.5px 5px 2.5px 5px;
+    }
+    
+    #syllabus > div > button:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #syllabus > div > div {
+        display: none;
+        flex-direction: column;
+    }
+
+    #syllabus > div > div > a {
+        padding: 2.5px 5px 2.5px 5px;
+        margin-left: 55px;
+    }
+
+    #syllabus > div > div > a:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #right-section {
+        max-width: 1000px;
+        padding: 50px 30px 50px 40px;
+        text-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    #up-section > span {
+        display: block;
+        width: 250px;
+        height: 3px;
+        background-color: black;
+    }
+}
 h1 {
     font-size: 1.75rem;
     font-weight: bold;
