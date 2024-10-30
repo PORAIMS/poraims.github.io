@@ -1,0 +1,136 @@
+* {
+    font-family: Lato,proxima-nova,Helvetica Neue,Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a:hover {
+    color: white; 
+    text-decoration:none; 
+    cursor:pointer;
+}
+
+@media(min-width: 1024px) {
+    #bigContainer {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #leftSection {
+        flex: 0 0 320px;
+        height: 100vh;
+        overflow-y: scroll;
+        background-color: black;
+        color: white;
+        box-shadow: 0.5rem 0.5rem 1rem rgba(0,0,0,0.2);
+    }
+
+    #textSection {
+        width: 260px;
+        padding: 50px 20px 30px 40px;
+        word-wrap: break-word;
+    }
+
+    #textSection > .muted {
+        margin: 20px 0px 5px 0px;
+    }
+
+    #syllabus {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #syllabus > div > button {
+        font-size: 1.125rem;
+        text-align: left;
+        margin-left: 25px;
+        padding: 2.5px 5px 2.5px 5px;
+    }
+    
+    #syllabus > div > button:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #syllabus > div > div {
+        display: none;
+        flex-direction: column;
+    }
+
+    #syllabus > div > div > a {
+        padding: 2.5px 5px 2.5px 5px;
+        margin-left: 55px;
+    }
+
+    #syllabus > div > div > a:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    #right-section {
+        max-width: 1000px;
+        height: 200px;
+        padding: 50px 30px 50px 40px;
+        text-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    #up-section > span {
+        display: block;
+        width: 250px;
+        height: 3px;
+        background-color: black;
+    }
+
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+}
+
+.muted {
+    color: white;
+}
+
+.mgBtBig {
+    margin-bottom: 40px;
+}
+
+.mgBtSm {
+    margin-bottom: 5px;
+}
+
+.mgBtMd{
+    margin-bottom: 15px;
+}
