@@ -111,6 +111,18 @@ a:hover {
         background-color: black;
     }
 
+    #first-robot-img {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #first-robot-img > img {
+        width: 300px;
+        border-radius: 10px;
+    }
+
 }
 
 
@@ -181,6 +193,19 @@ a:hover {
         height: 3px;
         background-color: black;
     }
+
+    #first-robot-img {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #first-robot-img > img {
+        width: 300px;
+        border-radius: 10px;
+    }
+
 }
 h1 {
     font-size: 1.75rem;
