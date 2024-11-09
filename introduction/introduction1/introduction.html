@@ -81,29 +81,70 @@
 
 
             <div id="right-section">
-                <div id="up-section"  class="mgBtBig">
-                    <h1 class="mgBtBig">Introduction</h1>
-                    <span class="mgBtSm"></span>
-                    <div class="mgBtSm">
-                        <h4><span>1.1 </span> BACKGROUND</h4>
-                        <h4><span>1.2 </span>THE MECHANICS AND CONTROL OF MECHANICAL MANIPULATORS</h4>
+                <div>
+                    <div id="up-section"  class="mgBtBig">
+                        <h1 class="mgBtBig">Introduction</h1>
+                        <span class="mgBtSm"></span>
+                        <div class="mgBtSm">
+                            <h4><span>1.1 </span> BACKGROUND</h4>
+                            <h4><span>1.2 </span>THE MECHANICS AND CONTROL OF MECHANICAL MANIPULATORS</h4>
+                        </div>
+                        <span></span>
                     </div>
-                    <span></span>
-                </div>
-
-                <div id="down-section">
-                    <h3 class="mgBtMd"><span>1.1 </span> BACKGROUND</h3>
-                    <p class="mgBtSm">
-                        &nbsp; &nbsp;The history of industrial automation reveals a strong link between advancements in automation methods and global economic shifts. Industrial robots, which became distinct tools in the 1960s, along with technologies like CAD and CAM, have driven transformations in manufacturing automation. These systems have paved the way for ongoing, unpredictable changes in how industries operate. In North America, the adoption of robots surged in the early 1980s before slowing briefly, yet has grown steadily since. Robotics now plays a critical role in manufacturing, largely due to declining costs and enhanced capabilities, allowing companies to cut labor expenses significantly.
-                    </p>
-                    <p class="mgBtBig">
-                        &nbsp; &nbsp;Industrial robots have revolutionized manufacturing by performing tasks that are not only cost-effective but also safer and sometimes impossible for humans. The cost of robotic technology is dropping, while the price of human labor rises, making robots an appealing choice for industrial tasks. By 2025, robots are projected to reduce labor costs by 16% on average. Historically, robots date back to ancient Greece, but industrial robotics took off with the introduction of Unimate in 1961, the first industrial robot used on General Motors' assembly line. Since then, robots have continuously evolved, positioning automation as a cornerstone of modern industry.
-                    </p>
-                    <div id="first-robot-img">
-                        <img src="../img/first-industrial-robot.jpeg" alt="" class="mgBtSm">
-                        <span>- first industial robot</span>
+    
+                    <div id="down-section">
+                        <h3 class="mgBtMd"><span>1.1 </span> BACKGROUND</h3>
+                        <p class="mgBtMd">
+                            The history of industrial automation reveals a strong link between advancements in automation methods and global economic shifts. Industrial robots, which became distinct tools in the 1960s, along with technologies like CAD and CAM, have driven transformations in manufacturing automation. These systems have paved the way for ongoing, unpredictable changes in how industries operate. In North America, the adoption of robots surged in the early 1980s before slowing briefly, yet has grown steadily since. Robotics now plays a critical role in manufacturing, largely due to declining costs and enhanced capabilities, allowing companies to cut labor expenses significantly.
+                        </p>
+                        <p class="mgBtBig">
+                            Industrial robots have revolutionized manufacturing by performing tasks that are not only cost-effective but also safer and sometimes impossible for humans. The cost of robotic technology is dropping, while the price of human labor rises, making robots an appealing choice for industrial tasks. By 2025, robots are projected to reduce labor costs by 16% on average. Historically, robots date back to ancient Greece, but industrial robotics took off with the introduction of Unimate in 1961, the first industrial robot used on General Motors' assembly line. Since then, robots have continuously evolved, positioning automation as a cornerstone of modern industry.
+                        </p>
+                        <div id="first-robot-img" class="mgBtBig">
+                            <img src="../img/first-industrial-robot.jpeg" alt="" class="mgBtSm">
+                            <span>- first industial robot</span>
+                        </div>
+                        <h3 class="mgBtMd"><span>1.2 </span> WHAT IS ROBOT</h3>
+                        <p class="mgBtMd">Despite the growing integration of robots into various fields, including healthcare, there is no universally accepted definition that covers all forms of robots.</p>
+                        <p class="mgBtSm">Generally, a robot is considered a mechanical or virtual agent, often with electromechanical components, that is programmed via a computer system. The programming allows it to perform tasks in a way that may appear as if it has independent intentions or represents a human agent. While this description is broad, it highlights several key features that many robots share:</p>
+                        <ol class="subp">
+                            <li class="mgBtSm"><span class="bold">Artificially Constructed: </span>Robots are non-natural entities, either physical or virtual, created through engineering.</li>
+                            <li class="mgBtSm"><span class="bold">Environmental Perception: </span>Many robots possess sensors that allow them to understand and react to their surroundings.</li>
+                            <li class="mgBtSm"><span class="bold">Interaction with the Environment: </span>They often have the ability to manipulate objects or navigate within a space.</li>
+                            <li class="mgBtMd"><span class="bold">Programmability and Intelligence: </span>Robots can be reprogrammed and may demonstrate varying levels of intelligence.</li>
+                            </ol>
+                        <p class="mgBtMd">From a more standardized perspective, the International Organization for Standardization (ISO 8373) defines an industrial robot as "an automatically controlled, reprogrammable, multipurpose manipulator, programmable in three or more axes, which can be either stationary or mobile" and is primarily used in automation applications.</p>
+                        <p class="mgBtBig">For the medical applications context, it’s also relevant to mention service robots. Unlike industrial robots, service robots are designed to interact with humans and assist with healthcare, rehabilitation, and surgery. This category often includes robotic systems that provide high precision and aid in minimally invasive procedures, making them crucial in modern medical sciences.</p>
+                        <h3 class="mgBtMd"><span>1.3 </span> KEY COMPONENTS OF A ROBOT</h3>
+                        <h4 class="mgBtSm">&nbsp; &nbsp;1.3.1 Mechanical Structure of Robots</h4>
+                        <div class="subp">
+                            <p class="mgBtMd">In the context of medical robotics, the <span class="bold">mechanical structure</span> is a critical component that dictates the robot's design, flexibility, precision, and range of motion. The mechanical design must be carefully tailored to meet the stringent requirements of medical applications, where safety, dexterity, and minimal invasiveness are paramount.</p>
+                            <div>
+                                <p class="bold mgBtSm">1.3.1.1 Manipulators and Joints</p>
+                                <div class="subp">
+                                    <p class="mgBtSm">Medical robots often incorporate highly articulated manipulators designed to mimic human arm movements. These manipulators typically consist of:</p>
+                                    <div class="subp">
+                                        <ul id="joint-list">
+                                            <li class="mgBtMd"><span class="bold">Revolute Joints: </span>Allow rotation around an axis, providing greater flexibility and precision. These are commonly used in surgical robots to enable intricate movements.</li>
+                                            <div class="mgBtBig"><iframe class="youtube-iframe" src="https://www.youtube.com/embed/wwyJS9X3WvE?si=flB6PoMx7jscliVh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                            <li class="mgBtSm"><span class="bold">Prismatic Joints: </span>Provide linear motion, which can be beneficial in applications like robotic prosthetics, where extending and contracting movements are necessary.</li>
+                                            <div class="mgBtBig"><iframe class="youtube-iframe" src="https://www.youtube.com/embed/ih3oXigeY-U?si=2LWUDbDAtpgY8Z-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                            <li class="mgBtSm"><span class="bold">Spherical Joints: </span> A spherical joint allows three rotational degrees of freedom (pitch, yaw, and roll), similar to a human shoulder joint. It can rotate in multiple directions, enabling a wide range of motion. In robotic arms used for ultrasound imaging, spherical joints help navigate around the patient’s body, allowing comprehensive scanning without repositioning the arm.</li>
+                                            <div class="mgBtBig"><iframe class="youtube-iframe" src="https://www.youtube.com/embed/VfNmW1J9A6I?si=QvQdfV7qaufOX_YB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                            <li class="mgBtSm"><span class="bold">Cylindrical Joints: </span>A cylindrical joint combines one prismatic (linear) and one revolute (rotational) degree of freedom. This allows the joint to move in a straight line while also rotating around an axis.  In a robotic exoskeleton, cylindrical joints help provide the dual motion needed for arm support, combining linear lifting with rotational movements.</li>
+                                            <div class="mgBtBig"><iframe class="youtube-iframe" src="https://www.youtube.com/embed/Asnl4oprBJc?si=9AQK6TBUPn2N4isD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                            <li class="mgBtSm"><span class="bold">Planar Joints: </span>Planar joints allow movement in a two-dimensional plane, typically involving sliding and rotational motions within the same plane. In medical lab automation robots, planar joints enable the precise movement of tools and instruments across the workspace.</li>
+                                            <div class="mgBtBig"><iframe class="youtube-iframe" src="https://www.youtube.com/embed/cjJaXjyJNPA?si=0TFJGtLXgchk5J38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                            <li class="mgBtSm"><span class="bold">Universal Joints: </span> A universal joint allows rotational movement around two perpendicular axes, giving two degrees of rotational freedom. It is less flexible than a spherical joint but simpler and more robust. In robotic systems used for orthopedic surgery, universal joints can provide stable and precise movement when drilling or cutting.</li>
+                                            <div class="mgBtBig"><iframe class="youtube-iframe" src="https://www.youtube.com/embed/Tjn5BAqSb2Q?si=Xg_NMPYivowAM1gq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
-                </div>
+                </div>   
             </div>
         </div>
 
