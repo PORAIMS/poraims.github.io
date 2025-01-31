@@ -1,0 +1,23 @@
+* {
+    font-family: Lato,proxima-nova,Helvetica Neue,Arial,sans-serif;
+}
+
+body {
+        overflow-x: hidden !important;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 100px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+.inner_container {
+    padding-left: 30px;
+}
