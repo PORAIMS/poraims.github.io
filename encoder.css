@@ -6,18 +6,37 @@ body {
         overflow-x: hidden !important;
 }
 
-
+@media(min-width: 992px) {
 .container {
     display: flex;
     flex-direction: column;
     padding: 0px 100px;
 }
 
-img {
-    width: 300px;
+div > img {
+    width: 600px;
     height: auto;
 }
 
 .inner_container {
     padding-left: 30px;
+}
+}
+
+@media(max-width: 992px){
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    img {
+        width: 600px;
+        height: auto;
+    }
+
+    div > img {
+        width: 300px;
+    }
+    
+
 }
