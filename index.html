@@ -3,49 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Topics</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Encoder</title>
+
+    <link rel="stylesheet" href="./encoder.css">
+
 </head>
 <body>
-    <div class="accordion">
-        <div class="accordion-item">
-            <button class="accordion-header">Introduction <span class="icon">+</span></button>
-            <div class="notActive">
-                <a href="./introduction/introduction1/introduction.html">
-                    <div class="accordion-content">
-                        <p>part 1</p>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="accordion-content">
-                        <p>part 2</p>
-                    </div>
-                </a>
+    <div class="container">
+        <h1>
+            Encoders
+        </h1>
+        <div>
+            <h3>
+                1. WHAT IS ENCODER
+            </h3>
+            <div class="inner_container">
+                <p>
+                    Encoders are sensors that generate digital signals in response to movement. Both shaft encoders, which respond to rotation, and linear encoders, which respond to motion in a line, are available.
+                    Encoders are used to determine the position, velocity and direction of a motor shaft or other mechanical motion. They provide information required for the precise control of a variety of applications, such as positioning a rotary table, pick and place, machine assembly, packaging, robotics and more. Regardless of type, all encoders provide a method of orientation detection that’s used as a reference point for position control.
+                </p>
             </div>
         </div>
-        <div class="accordion-item">
-            <button class="accordion-header">Routing<span class="icon">+</span></button>
-            <div class="notActive">
-                <a href="">
-                    <div class="accordion-content">
-                        <p>part 1</p>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="accordion-content">
-                        <p>part 2</p>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="accordion-content">
-                        <p>part 3</p>
-                    </div>
-                </a>
+
+        <div>
+            <h3>
+                2. TECHNOLOGIES OF ENCODER
+            </h3>
+            <div class="inner_container">
+                <p>
+                    An encoder (for industrial controls) is a special sensor that captures position information and relays that data to other devices. The position information can be determined using one of three technologies: optical, magnetic or capacitive. Optical encoders are the most accurate of the standard styles of encoders.
+                </p>
             </div>
         </div>
-        <!-- Add more weeks similarly -->
+
+        <div>
+            <h3>
+                3. TYPE OF ENCODER
+            </h3>
+            <div class="inner_container">
+            <p>
+                In general, there are two main types of encoders: incremental and absolute. Incremental encoders generate a series of pulses in response to motion. These pulses can be used to measure speed or be fed to a counter to keep track of position. On the other hand, absolute encoders generate multi-bit digital words that indicate actual position directly. A major benefit of absolute encoders is that if the application loses power the encoder “remembers” its position prior to the power loss. An incremental encoder, on the other hand, does not have this inherent memory feature and so must be driven to home or a reference position in order to reset itself.
+                Incremental encoders are used mainly for position control and also for speed measurement where the lack of a zero point doesn’t effect performance. Absolute encoders can be used for both position and speed sensing and are useful where it is impractical or inconvenient to home the machinery each time the power is brought up.
+            </p>
+            <div style="display: flex; align-items: center; text-align: center;">
+                <img src="./images/Screenshot from 2025-01-31 10-09-31.png" alt="" style="width: 600px;">
+            </div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <h3>4. INCRIMENTAL ENCODER</h3>
+                <h4>4.1 HOW IT WORK</h4>
+                <p>
+                    Among the most popular position measuring sensors, optical encoders ﬁnd use in relatively low reliability and low resolution applications. An incremental optical encoder (left-hand diagram in Figure below) is a disc divided into sectors that are alternately transparent and opaque. A light source is positioned on one side of the disc, and a light sensor on the other side. As the disc rotates, the output from the detector switches alternately on and off, depending on whether the sector appearing between the light source and the detector is transparent or opaque. Thus, the encoder produces a stream of square wave pulses which, when counted, indicates the angular position of the shaft.
+                </p>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="./images/Screenshot from 2025-01-31 10-39-28.png" alt="image of encoder" style="width: 400px;">
+                </div>
+                
+                
+                <div>
+                    <h4>4.2 QUADRATURE OUTPUT</h4>
+                    <div class="inner_container">
+                        <p>
+                            Most incremental encoders feature a second light source and sensor at an angle to the main source and sensor, to indicate the direction of rotation<span>(quadrature output)</span>.
+                        </p>
+                    <p>A quadrature output is a type of signal generated by rotary or linear encoders that allows precise determination of position, speed, and direction. Encoders with quadrature output typically generate two square wave signals, Channel A and Channel B, that are 90 degrees out of phase with each other (hence the term "quadrature"). These two outputs can either be ON or OFF, resulting in four different “states” for each segment of resolution. </p>
+                    <p>The encoder produces two pulse signals that are offset by 90 degrees (in quadrature) as the encoder rotates or moves. The phase relationship between the two channels determines the direction: If A leads B, the movement is in one direction. If B leads A, the movement is in the opposite direction.</p>
+                    <p>
+                        CPR most often represents counts per revolution and refers to the number of quadrature
+decoded states that exist between the outputs A and B. When A and B outputs are
+switched between high level and low level, two bits of information will appear, indicating
+four different states.
+                    </p>
+                    <p>The image below shows the four different states of the quadrature output.</p>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="./images/Screenshot from 2025-01-26 15-52-29.png" alt="image">
+                        <p style="display: flex; flex-direction: column;">
+                            <span>Time slice “a”: A = OFF and B = ON</span>
+                            <span>Time slice “b”: A and B both OFF</span>
+                            <span>Time slice “c”: A = On and B = OFF</span>
+                            <span>Time slice “d”: A and B both ON.</span>
+                        </p>
+                    </div>
+                    <p>Therefore, a quadrature encoder with a resolution of 100 pulses per revolution (100 “slots” of an A channel or B channel) would actually produce 400 different states for each revolution of the encoder. That’s why quadrature encoders are sometimes referred to as x4 (times 4) encoders. we describe it below.</p>
+                    <h4>
+                       X1 
+                    </h4>
+                    <p>
+                        As shown in Figure below, it shows the number of addition and subtraction of count value
+under an orthogonal period and its corresponding X1 encoding type. When channel a
+guides channel B, the increment occurs on the rising edge of channel A. When channel B
+guides channel A, decrement occurs on the falling edge of channel A
+                    </p>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="./images/Screenshot from 2025-01-31 10-25-20.png" alt="" style="width: 600px;">
+                        <span>Waveforms of X1 encoding.</span>
+                    </div>
+
+                    <h4>
+                        X2 
+                     </h4>
+                     <p>
+                        X2 encoding is similar to the above process, except that whether the counter counts at
+                        each edge of channel a increase or decrease depends on which channel guides which
+                        channel. The value of the counter will increase or decrease by 2 in each cycle, as shown
+                        in Figure below.
+                     </p>
+                     <div style="display: flex; flex-direction: column; align-items: center;">
+                         <img src="./images/Screenshot from 2025-01-31 10-29-13.png" alt="" style="width: 600px;">
+                         <span>Waveforms of X2 encoding.</span>
+                     </div>
+
+                     <h4>
+                        X4 
+                     </h4>
+                     <p>
+                        By X4 encoding, the counter also increases or decreases on each edge of channels A
+and B. Whether the number of counters increases or decreases depends on which
+channel guides which channel. The number of counters increases or decreases by 4 in
+each cycle, as shown in Figure below.
+                     </p>
+                     <div style="display: flex; flex-direction: column; align-items: center;">
+                         <img src="./images/Screenshot from 2025-01-31 10-30-32.png" alt="" style="width: 600px;">
+                         <span>Waveforms of X4 encoding.</span>
+                     </div>
+                </div>
+                <div>
+                    <h4>
+                        4.3 Resolution
+                    </h4>
+                    <p>
+                        The term pulse per resolution(PPR) denotes the resolution of the encoder. PPR describes the number of high
+                        pulses appearing on the square wave output A or B of the encoder per revolution.
+                    </p>
+                    <p>
+                        Resolution is a term used to describe the pulse per
+    revolution (PPR) for incremental encoders. Each
+    incremental encoder has a defined number of cycles
+    that are generated for each 360 degree revolution of
+    the shaft. These cycles are monitored by a counter
+    or motion controller and converted to counts for position or velocity control.
+    Once the resolution is known, it can be used to calculate the geometric angle of each
+    pulse and period. As shown in Figure below.
+                    </p>
+                    
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="./images/Screenshot from 2025-01-31 10-35-47.png" alt="" style="width: 600px;">
+                    </div>
+                   
+                </div>
+                </div>
+                <p> Many encoders also have a third light source and detector to sense a once-per-revolution marker<span>(index pulse (Z signal))</span>.</p>
+                <div>
+                    <h4>4.4 index pulse (Z signal)</h4>
+                    <div class="inner_container">
+                    <p>Incremental
+                        encoders can provide a once-per-revolution pulse
+                        (often called the index, marker, or reference) that
+                        occurs at the same mechanical point of the encoder
+                        shaft revolution. This pulse is on a separate output
+                        channel (Z) from the signal channel or quadrature
+                        outputs. The index pulse is often used to position
+                        motion control applications to a known mechanical
+                        reference.
+                        So some encoders also have a third channel called index channel, which
+                        sends a pulse every time it completes a rotation.
+                    </p>
+                    <p></p>
+                </div>
+                </div>
+                <p>Without some form of revolution marker, absolute angles are difﬁcult to determine. A potentially serious disadvantage is that incremental encoders require external counters to determine absolute angles within a given rotation. If the power is momentarily shut off, or if the encoder misses a pulse due to noise or a dirty disc, the resulting angular information will be in error.</p>
+                <div>
+                    <h3>5. ABSOLUTE ENCODER</h3>
+                    <p>
+                        An absolute encoder is a device used to measure the angular position of a rotating shaft. Unlike incremental encoders, which only provide information about the relative movement (i.e., how much the shaft has rotated from a reference point), absolute encoders provide a unique digital code for each position of the shaft, allowing the exact position to be known immediately upon power-up, without the need for a reference or homing procedure.
+                    </p>
+                    <div>
+                    <h4>5.1 HOW IT WORK</h4>
+                    <p>
+                        Absolute encoders use a disk attached to the rotating shaft. This disk is divided into multiple tracks, each with a unique pattern of transparent and opaque segments. Each track corresponds to a bit in the digital output code. The number of tracks determines the resolution of the encoder. For example, a 12-bit encoder has 12 tracks, providing 4096 unique positions (2^12). 
+                    </p>
+                    <p>Imagine a disk with 4 tracks (4-bit encoder). Each track has a pattern of transparent and opaque segments. The outermost track represents the least significant bit (LSB), and the innermost track represents the most significant bit (MSB). Position 0: All tracks are transparent (0000 in binary). Position 1: Only the LSB track is opaque (0001 in binary). Position 2: The second track is opaque (0010 in binary). Position 3: The first and second tracks are opaque (0011 in binary).  And so on, up to Position 15 (1111 in binary). As the disk rotates, the photodetectors read the pattern of each track, and the encoder outputs the corresponding binary or Gray code, indicating the exact position of the shaft.</p>
+                    <p>The combination of signals from all the tracks forms a unique binary or Gray code that corresponds to the shaft's position. Gray code is often used instead of binary code because it minimizes errors during transitions between positions. In Gray code, only one bit changes at a time, reducing the chance of misreading the position.</p>
+                    <p>The most common type of absolute encoder uses optical sensing. Light sources (e.g., LEDs) are placed on one side of the disk, and photodetectors are placed on the other side.  As the disk rotates, the light passes through the transparent segments and is blocked by the opaque segments. The photodetectors read the pattern of light and dark, generating a digital code that represents the shaft's position.</p>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="./images/Binary-code-disk-for-an-absolute-optical-rotary-encoder-Opaque-sectors-represent-a.png" alt="" style="width: 600px;">
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="./images/9ab847a5aebc6a1d86bb734b57579407ce5746f5.jpeg" alt="" style="width: 300px;">
+                        <span>4-bit absolute encoder</span>
+                    </div>
+                </div>
+                <div>
+                    <h4>5.2 Resolution</h4>
+                    <p>
+                        The resolution of an absolute encoder is determined by the number of tracks on the disk. More tracks mean higher resolution and more precise position measurement. For an absolute encoder, the resolution is determined by the number of bits in its output code. 
+                    </p>
+                    <p>For example a 12-bit absolute encoder has ( 2^12 = 4096 ) unique positions.  Its resolution is: (360/4096) degree per count.</p>
+                </div>
+
+
+                <div>
+                    <h4>5.3 TYPES</h4>
+                    <p>
+                        Encoders provide a unique code for each position within one full rotation (360 degrees). After one full rotation, the code repeats. If power is lost, the actual value of the position will be known when power is restored because each location in an absolute encoder’s revolution is a unique binary value. There’s one drawback to single-turn absolute encoders: the exact angle of the encoder when powered up is evident, but the number of turns made before powering up isn’t. Multi-turn absolute encoders are used to solve this problem.
+                    </p>
+                    <p>Multi-turn absolute encoders usually have a battery or super-capacitor that monitors how many revolutions the encoder has turned even while power is off. A multi-turn absolute encoder is like a measuring wheel that increments once per revolution. These encoders typically have serial communication and require special receivers to decode their position information. </p>
+                </div>
+
+
+
+
+                    
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
